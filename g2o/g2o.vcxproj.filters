@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\core">
+      <UniqueIdentifier>{80940fb4-b714-44ae-b67a-6d2fd12c4bfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\types">
+      <UniqueIdentifier>{44d8f718-5cd6-49ec-889e-bca0d355f046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\stuff">
+      <UniqueIdentifier>{4db4b4d6-bcf5-449f-92b0-6faec11c3959}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\solvers">
+      <UniqueIdentifier>{02f04975-7fc8-450f-af26-906b0a36b1b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{d8cb7cb6-a024-423b-9fa4-fbbc634b8cda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\stuff">
+      <UniqueIdentifier>{2d303943-9f3d-4f5f-80df-cf1741b2bc9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\types">
+      <UniqueIdentifier>{63f4b79a-0320-43e4-a408-e32f6c529a0f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\base_binary_edge.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\base_binary_edge.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\base_edge.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\base_multi_edge.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\base_multi_edge.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\base_unary_edge.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\base_unary_edge.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\base_vertex.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\base_vertex.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\batch_stats.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\block_solver.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\block_solver.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\cache.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\creators.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\eigen_types.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\estimate_propagator.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\factory.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\g2o_core_api.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\hyper_dijkstra.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\hyper_graph.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\hyper_graph_action.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\jacobian_workspace.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\linear_solver.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\marginal_covariance_cholesky.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\matrix_operations.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\matrix_structure.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\openmp_mutex.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\optimizable_graph.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\optimization_algorithm.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\optimization_algorithm_dogleg.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\optimization_algorithm_factory.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\optimization_algorithm_gauss_newton.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\optimization_algorithm_levenberg.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\optimization_algorithm_property.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\optimization_algorithm_with_hessian.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\parameter.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\parameter_container.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\robust_kernel.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\robust_kernel_factory.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\robust_kernel_impl.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\solver.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\sparse_block_matrix.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\sparse_block_matrix.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\sparse_block_matrix_ccs.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\sparse_block_matrix_diagonal.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\sparse_optimizer.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\sparse_optimizer_terminate_action.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="solvers\linear_solver_dense.h">
+      <Filter>Header Files\solvers</Filter>
+    </ClInclude>
+    <ClInclude Include="solvers\linear_solver_eigen.h">
+      <Filter>Header Files\solvers</Filter>
+    </ClInclude>
+    <ClInclude Include="stuff\color_macros.h">
+      <Filter>Header Files\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="stuff\g2o_stuff_api.h">
+      <Filter>Header Files\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="stuff\macros.h">
+      <Filter>Header Files\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="stuff\misc.h">
+      <Filter>Header Files\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="stuff\os_specific.h">
+      <Filter>Header Files\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="stuff\property.h">
+      <Filter>Header Files\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="stuff\string_tools.h">
+      <Filter>Header Files\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="stuff\timeutil.h">
+      <Filter>Header Files\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="types\g2o_types_api.h">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="types\se3_ops.h">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="types\se3_ops.hpp">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="types\se3quat.h">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="types\sim3.h">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="types\types_sba.h">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="types\types_seven_dof_expmap.h">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="types\types_six_dof_expmap.h">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\batch_stats.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\cache.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\estimate_propagator.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\factory.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\hyper_dijkstra.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\hyper_graph.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\hyper_graph_action.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\jacobian_workspace.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\marginal_covariance_cholesky.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\matrix_structure.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\optimizable_graph.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\optimization_algorithm.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\optimization_algorithm_dogleg.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\optimization_algorithm_factory.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\optimization_algorithm_gauss_newton.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\optimization_algorithm_levenberg.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\optimization_algorithm_with_hessian.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\parameter.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\parameter_container.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\robust_kernel.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\robust_kernel_factory.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\robust_kernel_impl.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\solver.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\sparse_block_matrix_test.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\sparse_optimizer.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\sparse_optimizer_terminate_action.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="types\types_sba.cpp">
+      <Filter>Source Files\types</Filter>
+    </ClCompile>
+    <ClCompile Include="types\types_seven_dof_expmap.cpp">
+      <Filter>Source Files\types</Filter>
+    </ClCompile>
+    <ClCompile Include="types\types_six_dof_expmap.cpp">
+      <Filter>Source Files\types</Filter>
+    </ClCompile>
+    <ClCompile Include="stuff\os_specific.c">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="stuff\property.cpp">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="stuff\string_tools.cpp">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="stuff\timeutil.cpp">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

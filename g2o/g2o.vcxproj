@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7ACEA744-8DCC-4C5F-868B-112A6A18C15C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>g2o</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseIntelMKL>Parallel</UseIntelMKL>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseIntelMKL>Parallel</UseIntelMKL>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\common\Property\Eigen328_VS15_debug_x64.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\common\Property\Eigen328_VS15_release_x64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;G2O_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;G2O_EXPORTS;G2O_SHARED_LIBS;WINDOWS;EIGEN_USE_MKL_ALL;G2O_OPENMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;G2O_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;G2O_EXPORTS;G2O_SHARED_LIBS;WINDOWS;EIGEN_USE_MKL_ALL;G2O_OPENMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h" />
+    <ClInclude Include="core\base_binary_edge.h" />
+    <ClInclude Include="core\base_binary_edge.hpp" />
+    <ClInclude Include="core\base_edge.h" />
+    <ClInclude Include="core\base_multi_edge.h" />
+    <ClInclude Include="core\base_multi_edge.hpp" />
+    <ClInclude Include="core\base_unary_edge.h" />
+    <ClInclude Include="core\base_unary_edge.hpp" />
+    <ClInclude Include="core\base_vertex.h" />
+    <ClInclude Include="core\base_vertex.hpp" />
+    <ClInclude Include="core\batch_stats.h" />
+    <ClInclude Include="core\block_solver.h" />
+    <ClInclude Include="core\block_solver.hpp" />
+    <ClInclude Include="core\cache.h" />
+    <ClInclude Include="core\creators.h" />
+    <ClInclude Include="core\eigen_types.h" />
+    <ClInclude Include="core\estimate_propagator.h" />
+    <ClInclude Include="core\factory.h" />
+    <ClInclude Include="core\g2o_core_api.h" />
+    <ClInclude Include="core\hyper_dijkstra.h" />
+    <ClInclude Include="core\hyper_graph.h" />
+    <ClInclude Include="core\hyper_graph_action.h" />
+    <ClInclude Include="core\jacobian_workspace.h" />
+    <ClInclude Include="core\linear_solver.h" />
+    <ClInclude Include="core\marginal_covariance_cholesky.h" />
+    <ClInclude Include="core\matrix_operations.h" />
+    <ClInclude Include="core\matrix_structure.h" />
+    <ClInclude Include="core\openmp_mutex.h" />
+    <ClInclude Include="core\optimizable_graph.h" />
+    <ClInclude Include="core\optimization_algorithm.h" />
+    <ClInclude Include="core\optimization_algorithm_dogleg.h" />
+    <ClInclude Include="core\optimization_algorithm_factory.h" />
+    <ClInclude Include="core\optimization_algorithm_gauss_newton.h" />
+    <ClInclude Include="core\optimization_algorithm_levenberg.h" />
+    <ClInclude Include="core\optimization_algorithm_property.h" />
+    <ClInclude Include="core\optimization_algorithm_with_hessian.h" />
+    <ClInclude Include="core\parameter.h" />
+    <ClInclude Include="core\parameter_container.h" />
+    <ClInclude Include="core\robust_kernel.h" />
+    <ClInclude Include="core\robust_kernel_factory.h" />
+    <ClInclude Include="core\robust_kernel_impl.h" />
+    <ClInclude Include="core\solver.h" />
+    <ClInclude Include="core\sparse_block_matrix.h" />
+    <ClInclude Include="core\sparse_block_matrix.hpp" />
+    <ClInclude Include="core\sparse_block_matrix_ccs.h" />
+    <ClInclude Include="core\sparse_block_matrix_diagonal.h" />
+    <ClInclude Include="core\sparse_optimizer.h" />
+    <ClInclude Include="core\sparse_optimizer_terminate_action.h" />
+    <ClInclude Include="solvers\linear_solver_dense.h" />
+    <ClInclude Include="solvers\linear_solver_eigen.h" />
+    <ClInclude Include="stuff\color_macros.h" />
+    <ClInclude Include="stuff\g2o_stuff_api.h" />
+    <ClInclude Include="stuff\macros.h" />
+    <ClInclude Include="stuff\misc.h" />
+    <ClInclude Include="stuff\os_specific.h" />
+    <ClInclude Include="stuff\property.h" />
+    <ClInclude Include="stuff\string_tools.h" />
+    <ClInclude Include="stuff\timeutil.h" />
+    <ClInclude Include="types\g2o_types_api.h" />
+    <ClInclude Include="types\se3quat.h" />
+    <ClInclude Include="types\se3_ops.h" />
+    <ClInclude Include="types\se3_ops.hpp" />
+    <ClInclude Include="types\sim3.h" />
+    <ClInclude Include="types\types_sba.h" />
+    <ClInclude Include="types\types_seven_dof_expmap.h" />
+    <ClInclude Include="types\types_six_dof_expmap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\batch_stats.cpp" />
+    <ClCompile Include="core\cache.cpp" />
+    <ClCompile Include="core\estimate_propagator.cpp" />
+    <ClCompile Include="core\factory.cpp" />
+    <ClCompile Include="core\hyper_dijkstra.cpp" />
+    <ClCompile Include="core\hyper_graph.cpp" />
+    <ClCompile Include="core\hyper_graph_action.cpp" />
+    <ClCompile Include="core\jacobian_workspace.cpp" />
+    <ClCompile Include="core\marginal_covariance_cholesky.cpp" />
+    <ClCompile Include="core\matrix_structure.cpp" />
+    <ClCompile Include="core\optimizable_graph.cpp" />
+    <ClCompile Include="core\optimization_algorithm.cpp" />
+    <ClCompile Include="core\optimization_algorithm_dogleg.cpp" />
+    <ClCompile Include="core\optimization_algorithm_factory.cpp" />
+    <ClCompile Include="core\optimization_algorithm_gauss_newton.cpp" />
+    <ClCompile Include="core\optimization_algorithm_levenberg.cpp" />
+    <ClCompile Include="core\optimization_algorithm_with_hessian.cpp" />
+    <ClCompile Include="core\parameter.cpp" />
+    <ClCompile Include="core\parameter_container.cpp" />
+    <ClCompile Include="core\robust_kernel.cpp" />
+    <ClCompile Include="core\robust_kernel_factory.cpp" />
+    <ClCompile Include="core\robust_kernel_impl.cpp" />
+    <ClCompile Include="core\solver.cpp" />
+    <ClCompile Include="core\sparse_block_matrix_test.cpp" />
+    <ClCompile Include="core\sparse_optimizer.cpp" />
+    <ClCompile Include="core\sparse_optimizer_terminate_action.cpp" />
+    <ClCompile Include="stuff\os_specific.c" />
+    <ClCompile Include="stuff\property.cpp" />
+    <ClCompile Include="stuff\string_tools.cpp" />
+    <ClCompile Include="stuff\timeutil.cpp" />
+    <ClCompile Include="types\types_sba.cpp" />
+    <ClCompile Include="types\types_seven_dof_expmap.cpp" />
+    <ClCompile Include="types\types_six_dof_expmap.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
