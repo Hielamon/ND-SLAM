@@ -492,7 +492,7 @@ void Frame::ComputeStereoMatches()
 
     // Set limits for search
     const float minZ = mb;
-    const float minD = -3;
+    const float minD = 3;
     const float maxD = mbf/minZ;
 
     // For each left keypoint search a match in the right image
@@ -517,8 +517,10 @@ void Frame::ComputeStereoMatches()
         if(maxU<0)
             continue;
 
-        int bestDist = ORBmatcher::TH_HIGH;
+		int bestDist1 = 256;
+		int bestDist2 = 256;
         size_t bestIdxR = 0;
+		float nnratio = 0.7;
 
         const cv::Mat &dL = mDescriptors.row(iL);
 
@@ -538,16 +540,21 @@ void Frame::ComputeStereoMatches()
                 const cv::Mat &dR = mDescriptorsRight.row(iR);
                 const int dist = ORBmatcher::DescriptorDistance(dL,dR);
 
-                if(dist<bestDist)
+                if(dist<bestDist1)
                 {
-                    bestDist = dist;
+					bestDist2 = bestDist1;
+                    bestDist1 = dist;
                     bestIdxR = iR;
                 }
+				else if(dist < bestDist2)
+				{
+					bestDist2 = dist;
+				}
             }
         }
 
         // Subpixel match by correlation
-        if(bestDist<ORBmatcher::TH_HIGH)
+        if(bestDist1<ORBmatcher::TH_HIGH && bestDist1 < nnratio*bestDist2)
         {
             // coordinates in image pyramid at keypoint scale
             const float uR0 = mvKeysRight[bestIdxR].pt.x;
