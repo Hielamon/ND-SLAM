@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\DBoW2">
+      <UniqueIdentifier>{1e0e54f0-c117-4c9f-8e24-1dde613e2bf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\g2o">
+      <UniqueIdentifier>{a0dcb8e8-7634-4fa4-9191-f591b34b6d73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\orb-slam">
+      <UniqueIdentifier>{8e751d74-404c-4aad-8536-70fe74624edc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DBoW2">
+      <UniqueIdentifier>{774c16d3-baca-4855-aa09-be1b6b266b27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\g2o">
+      <UniqueIdentifier>{6af9f600-82eb-4034-8003-2e8bb3a95ac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\orb-slam">
+      <UniqueIdentifier>{6fd5f432-d861-4b45-94dc-80dc3023039e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\g2o\core">
+      <UniqueIdentifier>{d3cce5bd-2775-4003-b1f5-e4661ad9df38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\g2o\stuff">
+      <UniqueIdentifier>{9c724a38-b992-4d72-8201-bc18430a5e65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\g2o\types">
+      <UniqueIdentifier>{90e05991-ecdb-486b-aa63-3d7eda9ae985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\g2o\solvers">
+      <UniqueIdentifier>{3311c069-ff6c-429c-b0bb-fa8767cb9dc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\g2o\core">
+      <UniqueIdentifier>{4f5f48c1-91e3-4201-8b06-a7ef644caf67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\g2o\types">
+      <UniqueIdentifier>{c2eedebb-fa0e-42d3-825e-4575669a85a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\g2o\stuff">
+      <UniqueIdentifier>{63a3249e-1910-46ba-9607-d11a83774595}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DBoW2\BowVector.h">
+      <Filter>Header Files\DBoW2</Filter>
+    </ClInclude>
+    <ClInclude Include="DBoW2\DBoW2Api.h">
+      <Filter>Header Files\DBoW2</Filter>
+    </ClInclude>
+    <ClInclude Include="DBoW2\DUtilsApi.h">
+      <Filter>Header Files\DBoW2</Filter>
+    </ClInclude>
+    <ClInclude Include="DBoW2\FClass.h">
+      <Filter>Header Files\DBoW2</Filter>
+    </ClInclude>
+    <ClInclude Include="DBoW2\FeatureVector.h">
+      <Filter>Header Files\DBoW2</Filter>
+    </ClInclude>
+    <ClInclude Include="DBoW2\FORB.h">
+      <Filter>Header Files\DBoW2</Filter>
+    </ClInclude>
+    <ClInclude Include="DBoW2\Random.h">
+      <Filter>Header Files\DBoW2</Filter>
+    </ClInclude>
+    <ClInclude Include="DBoW2\ScoringObject.h">
+      <Filter>Header Files\DBoW2</Filter>
+    </ClInclude>
+    <ClInclude Include="DBoW2\TemplatedVocabulary.h">
+      <Filter>Header Files\DBoW2</Filter>
+    </ClInclude>
+    <ClInclude Include="DBoW2\Timestamp.h">
+      <Filter>Header Files\DBoW2</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\base_binary_edge.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\base_binary_edge.hpp">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\base_edge.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\base_multi_edge.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\base_multi_edge.hpp">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\base_unary_edge.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\base_unary_edge.hpp">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\base_vertex.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\base_vertex.hpp">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\batch_stats.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\block_solver.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\block_solver.hpp">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\cache.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\creators.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\eigen_types.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\estimate_propagator.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\factory.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\g2o_core_api.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\hyper_dijkstra.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\hyper_graph.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\hyper_graph_action.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\jacobian_workspace.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\linear_solver.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\marginal_covariance_cholesky.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\matrix_operations.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\matrix_structure.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\openmp_mutex.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\optimizable_graph.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\optimization_algorithm.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\optimization_algorithm_dogleg.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\optimization_algorithm_factory.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\optimization_algorithm_gauss_newton.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\optimization_algorithm_levenberg.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\optimization_algorithm_property.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\optimization_algorithm_with_hessian.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\parameter.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\parameter_container.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\robust_kernel.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\robust_kernel_factory.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\robust_kernel_impl.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\solver.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\sparse_block_matrix.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\sparse_block_matrix.hpp">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\sparse_block_matrix_ccs.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\sparse_block_matrix_diagonal.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\sparse_optimizer.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\core\sparse_optimizer_terminate_action.h">
+      <Filter>Header Files\g2o\core</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\solvers\linear_solver_dense.h">
+      <Filter>Header Files\g2o\solvers</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\solvers\linear_solver_eigen.h">
+      <Filter>Header Files\g2o\solvers</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\types\g2o_types_api.h">
+      <Filter>Header Files\g2o\types</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\types\se3_ops.h">
+      <Filter>Header Files\g2o\types</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\types\se3_ops.hpp">
+      <Filter>Header Files\g2o\types</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\types\se3quat.h">
+      <Filter>Header Files\g2o\types</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\types\sim3.h">
+      <Filter>Header Files\g2o\types</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\types\types_sba.h">
+      <Filter>Header Files\g2o\types</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\types\types_seven_dof_expmap.h">
+      <Filter>Header Files\g2o\types</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\types\types_six_dof_expmap.h">
+      <Filter>Header Files\g2o\types</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\stuff\color_macros.h">
+      <Filter>Header Files\g2o\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\stuff\g2o_stuff_api.h">
+      <Filter>Header Files\g2o\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\stuff\macros.h">
+      <Filter>Header Files\g2o\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\stuff\misc.h">
+      <Filter>Header Files\g2o\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\stuff\os_specific.h">
+      <Filter>Header Files\g2o\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\stuff\property.h">
+      <Filter>Header Files\g2o\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\stuff\string_tools.h">
+      <Filter>Header Files\g2o\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="g2o\stuff\timeutil.h">
+      <Filter>Header Files\g2o\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Converter.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Frame.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FrameDrawer.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Initializer.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\KeyFrame.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\KeyFrameDatabase.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LocalMapping.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LoopClosing.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Map.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MapDrawer.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MapPoint.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Optimizer.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ORBextractor.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ORBmatcher.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OrbSlamApi.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ORBVocabulary.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PnPsolver.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sim3Solver.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\System.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Tracking.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Viewer.h">
+      <Filter>Header Files\orb-slam</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DBoW2\BowVector.cpp">
+      <Filter>Source Files\DBoW2</Filter>
+    </ClCompile>
+    <ClCompile Include="DBoW2\FeatureVector.cpp">
+      <Filter>Source Files\DBoW2</Filter>
+    </ClCompile>
+    <ClCompile Include="DBoW2\FORB.cpp">
+      <Filter>Source Files\DBoW2</Filter>
+    </ClCompile>
+    <ClCompile Include="DBoW2\Random.cpp">
+      <Filter>Source Files\DBoW2</Filter>
+    </ClCompile>
+    <ClCompile Include="DBoW2\ScoringObject.cpp">
+      <Filter>Source Files\DBoW2</Filter>
+    </ClCompile>
+    <ClCompile Include="DBoW2\Timestamp.cpp">
+      <Filter>Source Files\DBoW2</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\batch_stats.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\cache.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\estimate_propagator.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\factory.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\hyper_dijkstra.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\hyper_graph.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\hyper_graph_action.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\jacobian_workspace.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\marginal_covariance_cholesky.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\matrix_structure.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimizable_graph.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm_dogleg.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm_factory.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm_gauss_newton.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm_levenberg.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm_with_hessian.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\parameter.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\parameter_container.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\robust_kernel.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\robust_kernel_factory.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\robust_kernel_impl.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\solver.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\sparse_block_matrix_test.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\sparse_optimizer.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\sparse_optimizer_terminate_action.cpp">
+      <Filter>Source Files\g2o\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\os_specific.c">
+      <Filter>Source Files\g2o\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\property.cpp">
+      <Filter>Source Files\g2o\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\string_tools.cpp">
+      <Filter>Source Files\g2o\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\timeutil.cpp">
+      <Filter>Source Files\g2o\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\types\types_sba.cpp">
+      <Filter>Source Files\g2o\types</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\types\types_seven_dof_expmap.cpp">
+      <Filter>Source Files\g2o\types</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\types\types_six_dof_expmap.cpp">
+      <Filter>Source Files\g2o\types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Converter.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Frame.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FrameDrawer.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Initializer.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\KeyFrame.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\KeyFrameDatabase.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LocalMapping.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LoopClosing.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Map.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MapDrawer.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MapPoint.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Optimizer.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ORBextractor.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ORBmatcher.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PnPsolver.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sim3Solver.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tracking.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Viewer.cc">
+      <Filter>Source Files\orb-slam</Filter>
+    </ClCompile>
+    <ClCompile Include="ALLIN-ORB-SLAM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
