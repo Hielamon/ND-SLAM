@@ -1,3 +1,9 @@
+#define MONOCULAR_TEST
+
+#ifdef MONOCULAR_TEST
+
+
+
 #include<iostream>
 #include<algorithm>
 #include<fstream>
@@ -100,6 +106,8 @@ int main(int argc, char **argv)
 
 		if (ttrack < 34.5)
 			Sleep(34.5 - ttrack);
+		else
+			Sleep(1);
 
 		//flag = cvWaitKey(skipTime);
 		//switch (flag)
@@ -130,3 +138,5 @@ int main(int argc, char **argv)
 
 	return 0;
 }
+
+#endif // MONOCULAR_TEST

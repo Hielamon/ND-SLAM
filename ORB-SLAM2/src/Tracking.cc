@@ -35,6 +35,8 @@
 
 #include<iostream>
 
+#include <binaryMat.h>
+
 #include<mutex>
 
 
@@ -86,19 +88,6 @@ Tracking::Tracking(System *pSys, ORBVocabulary* pVoc, FrameDrawer *pFrameDrawer,
     mMinFrames = 0;
     mMaxFrames = fps;
 
-    cout << endl << "Camera Parameters: " << endl;
-    cout << "- fx: " << fx << endl;
-    cout << "- fy: " << fy << endl;
-    cout << "- cx: " << cx << endl;
-    cout << "- cy: " << cy << endl;
-    cout << "- k1: " << DistCoef.at<float>(0) << endl;
-    cout << "- k2: " << DistCoef.at<float>(1) << endl;
-    if(DistCoef.rows==5)
-        cout << "- k3: " << DistCoef.at<float>(4) << endl;
-    cout << "- p1: " << DistCoef.at<float>(2) << endl;
-    cout << "- p2: " << DistCoef.at<float>(3) << endl;
-    cout << "- fps: " << fps << endl;
-
 
     int nRGB = fSettings["Camera.RGB"];
     mbRGB = nRGB;
@@ -118,11 +107,65 @@ Tracking::Tracking(System *pSys, ORBVocabulary* pVoc, FrameDrawer *pFrameDrawer,
 
     mpORBextractorLeft = new ORBextractor(nFeatures,fScaleFactor,nLevels,fIniThFAST,fMinThFAST);
 
-    if(sensor==System::STEREO)
-        mpORBextractorRight = new ORBextractor(nFeatures,fScaleFactor,nLevels,fIniThFAST,fMinThFAST);
+	if (sensor == System::STEREO)
+	{
+		mpORBextractorRight = new ORBextractor(nFeatures, fScaleFactor, nLevels, fIniThFAST, fMinThFAST);
+		std::string filename = "calibinfo.dat";
+		std::fstream fs(filename, std::ios::in | std::ios::binary);
+		if (!fs.is_open())
+		{
+			std::cout << "cannot open the file " << filename << std::endl;
+			exit(0);
+		}
+
+		double bf;
+		cv::Mat K_tmp;
+
+		fs.read((char*)&bf, sizeof(double));
+		loadMat(K_tmp, fs);
+		loadMat(mRectifymapX0, fs);
+		loadMat(mRectifymapY0, fs);
+		loadMat(mRectifymapX1, fs);
+		loadMat(mRectifymapY1, fs);
+
+		mbf = bf;
+		mK.at<float>(0, 0) = K_tmp.at<double>(0, 0);
+		mK.at<float>(1, 1) = K_tmp.at<double>(1, 1);
+		mK.at<float>(0, 2) = K_tmp.at<double>(0, 2);
+		mK.at<float>(1, 2) = K_tmp.at<double>(1, 2);
+
+		fx = K_tmp.at<double>(0, 0);
+		fy = K_tmp.at<double>(1, 1);
+		cx = K_tmp.at<double>(0, 2);
+		cy = K_tmp.at<double>(1, 2);
+
+		DistCoef.at<float>(0) = 0;
+		DistCoef.at<float>(1) = 0;
+		DistCoef.at<float>(2) = 0;
+		DistCoef.at<float>(3) = 0;
+		const float k3 = fSettings["Camera.k3"];
+		if (DistCoef.rows == 5)
+			DistCoef.at<float>(4) = 0;
+
+		DistCoef.copyTo(mDistCoef);
+	}
 
     if(sensor==System::MONOCULAR)
         mpIniORBextractor = new ORBextractor(2*nFeatures,fScaleFactor,nLevels,fIniThFAST,fMinThFAST);
+
+
+	cout << endl << "Camera Parameters: " << endl;
+	cout << "- fx: " << fx << endl;
+	cout << "- fy: " << fy << endl;
+	cout << "- cx: " << cx << endl;
+	cout << "- cy: " << cy << endl;
+	cout << "- k1: " << DistCoef.at<float>(0) << endl;
+	cout << "- k2: " << DistCoef.at<float>(1) << endl;
+	if (DistCoef.rows == 5)
+		cout << "- k3: " << DistCoef.at<float>(4) << endl;
+	cout << "- p1: " << DistCoef.at<float>(2) << endl;
+	cout << "- p2: " << DistCoef.at<float>(3) << endl;
+	cout << "- fps: " << fps << endl;
 
     cout << endl  << "ORB Extractor Parameters: " << endl;
     cout << "- Number of Features: " << nFeatures << endl;
@@ -195,6 +238,12 @@ cv::Mat Tracking::GrabImageStereo(const cv::Mat &imRectLeft, const cv::Mat &imRe
             cvtColor(imGrayRight,imGrayRight,CV_BGRA2GRAY);
         }
     }
+
+	if (!mRectifymapX0.empty())
+	{
+		cv::remap(mImGray, mImGray, mRectifymapX0, mRectifymapY0, CV_INTER_LINEAR);
+		cv::remap(imGrayRight, imGrayRight, mRectifymapX1, mRectifymapY1, CV_INTER_LINEAR);
+	}
 
     mCurrentFrame = Frame(mImGray,imGrayRight,timestamp,mpORBextractorLeft,mpORBextractorRight,mpORBVocabulary,mK,mDistCoef,mbf,mThDepth);
 
@@ -803,6 +852,9 @@ void Tracking::UpdateLastFrame()
 {
     // Update pose according to reference keyframe
     KeyFrame* pRef = mLastFrame.mpReferenceKF;
+
+	if (!pRef)return;
+
     cv::Mat Tlr = mlRelativeFramePoses.back();
 
     mLastFrame.SetPose(Tlr*pRef->GetPose());

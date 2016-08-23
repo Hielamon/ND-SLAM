@@ -214,6 +214,10 @@ protected:
     bool mbRGB;
 
     list<MapPoint*> mlpTemporalPoints;
+
+	//only for stereo rectify
+	cv::Mat mRectifymapX0, mRectifymapY0;
+	cv::Mat	mRectifymapX1, mRectifymapY1;
 };
 
 } //namespace ORB_SLAM

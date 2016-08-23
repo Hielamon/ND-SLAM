@@ -81,6 +81,9 @@
     <ClInclude Include="include\Viewer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\binaryMat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Converter.cc">
@@ -140,7 +143,13 @@
     <ClCompile Include="src\Viewer.cc">
       <Filter>Source Files\orb-slam2-src</Filter>
     </ClCompile>
-    <ClCompile Include="ND-SLAM-TEST.cpp">
+    <ClCompile Include="binaryMat.cpp">
+      <Filter>Source Files\orb-slam2-src</Filter>
+    </ClCompile>
+    <ClCompile Include="ND-STEREO-TEST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ND-MONOCULAE-TEST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
